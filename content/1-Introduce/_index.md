@@ -1,21 +1,27 @@
 ---
-title : "Introduction"
-date :  "`r Sys.Date()`" 
-weight : 1 
-chapter : false
-pre : " <b> 1. </b> "
+title: "Introduction"
+date: "`r Sys.Date()`"
+weight: 1
+chapter: false
+pre: " <b> 1. </b> "
 ---
-**Session Manager** is a function within the AWS System Manager service, SSM provides verifiable and secure version management without opening incoming ports, without Bastion Host or SSH key management. Session Manager also makes it easy to comply with corporate policies that require controlled access to instances, strict security practices, and fully auditable logs with instance access details, while still providing end-users with one-click cross-platform access to your managed instances.
 
-By using Session Manager, you get the following advantages that traditional methods do not have:
+**Amazon Rekognition Face Liveness** is a managed AWS service that uses advanced machine learning to determine if a detected face is from a live person instead of a spoofed image, video, or mask.  
+When paired with the **Amplify FaceLivenessDetector** component, it becomes straightforward to integrate liveness verification directly into your web or mobile application with minimal configuration.
 
-- No need to open port 22 for SSH protocol, so it is more secure.
-- Can be configured so that the connection does not need to go outside the internet, so it is more secure.
-- No need to manage the server's private key to connect to SSH.
-- Centralized management of users using AWS IAM.
-- Access to the server easily and simply with one click.
-- Faster access time than traditional methods like SSH
-- Support many different operating systems such as Linux, Windows, MacOS
-- Log the connection sessions and commands executed while connecting to the server.
-  
-With the above advantages, you can use Session Manager instead of using Bastion host technique to save us time and money when managing Bastion server. 
+Alongside liveness detection, **Amazon Rekognition CompareFaces** enables precise face matching between a captured image and one or more stored reference images in a **face collection**.  
+For optimal performance, a collection should contain **at least two or three different faces** to ensure accurate comparison results and avoid false positives.
+
+By combining these services, you gain several advantages over traditional face verification methods:
+
+- **Real-time liveness verification** prevents spoof attacks using photos, videos, or masks.
+- **High-accuracy face matching** through Rekognition CompareFaces, with similarity scoring to identify the best match.
+- **Simple front-end integration** with Amplify UI components, reducing development time.
+- **No need for custom ML model training**, as AWS handles the model lifecycle.
+- **Scalable storage** for reference images using Amazon S3.
+- **Seamless authentication** integration with Amazon Cognito for user management.
+- **Serverless deployment** with AWS Lambda, reducing infrastructure costs.
+- **Audit-friendly** — API calls and results can be logged for compliance purposes.
+
+With these capabilities, Rekognition Face Liveness combined with Amplify FaceLivenessDetector and CompareFaces delivers a secure, accurate, and developer-friendly solution for identity verification in modern applications.
+![alt text](image.png)

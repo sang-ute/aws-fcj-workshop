@@ -1,11 +1,11 @@
 ---
-title: "Face attendance with anti-spoofing using AWS Rekognition FaceLiveness, CompareFaces and SearchFacesByImage via Amplify"
+title: "Face attendance with anti-spoofing using AWS Rekognition, via Amplify"
 date: "`r Sys.Date()`"
 weight: 1
 chapter: false
 ---
 
-# Face Attendance System with AWS Rekognition and Amplify
+# Face attendance with anti-spoofing using AWS Rekognition, via Amplify
 
 ### Overview
 
@@ -19,7 +19,9 @@ The core flow includes:
 - **Frontend** built with React and Amplify
 - **Backend** using Express and AWS SDK
 
-![ConnectPrivate](/images/arc-log.png)
+Here's the architechture of a live session (when deploying serverless)
+
+![alt text](image.png)
 
 ### Content
 
@@ -32,7 +34,7 @@ The core flow includes:
    - Install **Node.js** and **npm**
    - Install and configure the **AWS CLI** (`aws configure`)
    - Install the **Amplify CLI** (`npm install -g @aws-amplify/cli`)
-   - Bootstrap your React frontend (`npx create-react-app`)
+   - Make your Vite React frontend (`npm create vite@latest`)
    - Initialize Amplify (`amplify init`)
    - Enable **Face Liveness** in Amplify
    - Create a **Rekognition collection**, **S3 bucket**, and required **IAM roles**
