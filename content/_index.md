@@ -25,28 +25,27 @@ Here's the architechture of a live session (when deploying serverless)
 
 ### Content
 
-1. [Introduction](1-introduce/)  
-   Overview of the project goal, architecture, and Rekognition features used.
+1. Overview of the project goal, architecture, and Rekognition features used.
 
-2. [Preparation](2-prerequiste/)  
-   Set up both your development and AWS environments:
+2. Set up both your development and AWS environments:
 
    - Install **Node.js** and **npm**
    - Install and configure the **AWS CLI** (`aws configure`)
    - Install the **Amplify CLI** (`npm install -g @aws-amplify/cli`)
-   - Make your Vite React frontend (`npm create vite@latest`)
    - Initialize Amplify (`amplify init`)
    - Enable **Face Liveness** in Amplify
    - Create a **Rekognition collection**, **S3 bucket**, and required **IAM roles**
 
-3. [Liveness Detection with Amplify](3-liveness/)  
-   Integrate `FaceLivenessDetector` to capture live user sessions in the browser.
+3. Integrate Amplify to capture live user sessions in the browser.
 
-4. [Face Matching Logic](4-matching/)  
-   Process the captured image and match it against the Rekognition collection using `CompareFaces` or `SearchFacesByImage`.
+4. Create and setup correct S3 for Rekognition to connect
 
-5. [Attendance Check-In Flow](5-checkin/)  
-   Build the complete check-in logic: from frontend liveness → to backend match → to recording attendance (e.g., in DynamoDB).
+5. Build the complete check-in logic: from frontend liveness → to backend match → to recording attendance (e.g., in DynamoDB).
 
-6. [Clean Up Resources](6-cleanup/)  
-   Remove all AWS and local resources to avoid incurring costs.
+6. Deploy locally, then to Amplify for serverless deployment.
+
+7. Deploy the Lambda functions to API Gateway to expose them as REST APIs.
+
+8. Deploy the frontend to S3 + CloudFront Hosting.
+
+9. Clean up resources to avoid unnecessary costs.

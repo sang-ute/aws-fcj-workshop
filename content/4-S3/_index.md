@@ -1,5 +1,5 @@
 ---
-title: "Create S3 Bucket for project"
+title: "Setup S3 Bucket"
 date: "`r Sys.Date()`"
 weight: 4
 chapter: false
