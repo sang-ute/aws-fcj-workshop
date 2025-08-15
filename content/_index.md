@@ -21,7 +21,7 @@ The core flow includes:
 
 Here's the architechture of a live session (when deploying serverless)
 
-![alt text](image.png)
+![alt text](image-1.png)
 
 ### Content
 
